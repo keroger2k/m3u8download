@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "start:dev": "npx concurrently \"npm run dev\" \"cd ../backend && . /opt/venv/bin/activate && flask run --host=0.0.0.0 --port=5001\"",
+    "dev": "npx vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
