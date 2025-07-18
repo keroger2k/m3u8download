@@ -6,8 +6,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/workspace
-    working_dir: /workspace
-    command: /workspace/start.sh
+    working_dir: /workspace/frontend
+    command: npm run start:dev
     ports:
       - "3000:3000"
       - "5001:5001"

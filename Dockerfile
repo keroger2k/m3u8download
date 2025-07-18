@@ -20,4 +20,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN . /opt/venv/bin/activate && pip install --no-cache-dir -r backend/requirements.txt
 
 # Install frontend dependencies
-RUN cd frontend && npm install
+RUN cd frontend && npm install && npm install concurrently
