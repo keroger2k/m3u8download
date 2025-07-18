@@ -9,6 +9,9 @@ WORKDIR /workspace
 # Copy application files
 COPY . .
 
+# Make start.sh executable
+RUN chmod +x start.sh
+
 # Create a virtual environment
 RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
