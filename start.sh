@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 # Install Python dependencies
 . /opt/venv/bin/activate && pip install --no-cache-dir -r backend/requirements.txt
 # Install frontend dependencies
