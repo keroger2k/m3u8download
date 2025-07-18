@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:20
 
 # Install Python and pip
 RUN apt-get update && apt-get install -y python3 python3-pip python3-venv ffmpeg
@@ -10,7 +10,7 @@ WORKDIR /workspace
 COPY . .
 
 # Make start.sh executable
-RUN chmod +x start.sh
+#RUN chmod +x start.sh
 
 # Create a virtual environment
 RUN python3 -m venv /opt/venv
