@@ -9,10 +9,13 @@
         "ms-python.python",
         "ms-azuretools.vscode-docker",
         "esbenp.prettier-vscode"
-      ]
+      ],
+      "settings": {
+        "python.pythonPath": "/opt/venv/bin/python"
+      }
     }
   },
   "forwardPorts": [3000, 5001],
-  "postCreateCommand": "pip install --no-cache-dir -r backend/requirements.txt && cd frontend && npm install && cd ..",
+  "postCreateCommand": ". /opt/venv/bin/activate && pip install --no-cache-dir -r backend/requirements.txt && cd frontend && npm install && cd ..",
   "remoteUser": "node"
 }
