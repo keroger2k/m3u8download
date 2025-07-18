@@ -29,7 +29,7 @@ function App() {
 
       const data = await response.json();
       setDownloadUrl(data.download_url);
-    } catch (err: any) "{"
+    } catch (err: any) {
       setError(err.message);
     } finally {
       setIsLoading(false);

@@ -1,21 +1,17 @@
 {
-  "name": "M3U8 Downloader",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspace",
+  "name": "m3u8download-devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspaces/m3u8download",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-azuretools.vscode-docker",
-        "esbenp.prettier-vscode"
-      ],
-      "settings": {
-        "python.pythonPath": "/opt/venv/bin/python"
-      }
+        "dbaeumer.vscode-eslint"
+      ]
     }
   },
   "forwardPorts": [3000, 5001],
-  "postCreateCommand": ". /opt/venv/bin/activate && pip install --no-cache-dir -r backend/requirements.txt && cd frontend && npm install && cd ..",
-  "remoteUser": "node"
+  "postCreateCommand": "cd frontend && npm install && npm install concurrently --save-dev && cd ../backend && pip install -r requirements.txt"
 }
