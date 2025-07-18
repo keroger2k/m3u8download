@@ -16,6 +16,5 @@
     }
   },
   "forwardPorts": [3000, 5001],
-  "postCreateCommand": ". /opt/venv/bin/activate && pip install --no-cache-dir -r backend/requirements.txt && cd frontend && npm install && cd ..",
   "remoteUser": "node"
 }

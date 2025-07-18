@@ -10,14 +10,8 @@ WORKDIR /workspace
 COPY . .
 
 # Make start.sh executable
-#RUN chmod +x start.sh
+RUN chmod +x start.sh
 
 # Create a virtual environment
 RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
-
-# Install Python dependencies
-RUN . /opt/venv/bin/activate && pip install --no-cache-dir -r backend/requirements.txt
-
-# Install frontend dependencies
-RUN cd frontend && npm install && npm install concurrently
