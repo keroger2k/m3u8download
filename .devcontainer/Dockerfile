@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:3.11
 
 # Install Node.js, npm, and npx
 RUN apt-get update && \
-    apt-get install -y curl && \
+    apt-get install -y curl ffmpeg && \
     curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs
 
